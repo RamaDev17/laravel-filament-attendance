@@ -8,5 +8,5 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/presensi', Presensi::class)->name('presensi');
+    Route::get('/presence', Presensi::class)->name('presence');
 });

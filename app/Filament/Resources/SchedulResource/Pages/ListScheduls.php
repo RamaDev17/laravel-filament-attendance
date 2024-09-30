@@ -16,7 +16,7 @@ class ListScheduls extends ListRecords
         $is_super_admin = Auth::user()->hasRole('super_admin');
         return [
             !$is_super_admin ? Actions\Action::make('Presensi')
-                ->url(route('presensi'))
+                ->url(route('presence'))
                 ->color('warning')
             : Actions\CreateAction::make()
         ];
